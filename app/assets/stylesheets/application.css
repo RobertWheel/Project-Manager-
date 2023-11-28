@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+
+.card {
+  padding: 1rem 2rem;
+  margin: 2rem 0rem;
+}
+
+fieldset legend {
+  float: none;
+
+}
+
+#navbarNav {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#authentication {
+     max-width: 20rem;
+     margin: 0 auto;
+}
+
+
+

@@ -5,3 +5,24 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+
+User.create(
+:email => "admin@projects.local",
+:password => "Pass1234"
+)
+
+
+Project.create(
+:name => "Project 1",
+:description => "Random text")
+
+
+Project.create(
+:name => "Project 2",
+:description => "Random text")
+
+
+Project.create(
+:name => "Project 3",
+:description => "Random text")

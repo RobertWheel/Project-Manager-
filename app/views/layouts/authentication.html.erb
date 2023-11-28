@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
   <head>
-    <title>ProMan</title>
+    <title>Project Management</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -14,34 +14,9 @@
 
   </head>
 
-  <body>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-   <div class="container-fluid">
-   <a class="navbar-brand" href="/projects">Project Managment</a>
-     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-        </button>
-        <% if current_user.present? %>
-        <div class="collapse navbar-collapse" id="navbarNav">
-         <ul class="navbar-nav">
-           <li class="nav-item">
-         </li>
-           <li class="nav-item">
-         <a class="nav-link" href="/projects">Project</a>
-           </li>
-           
-         </a>
-       </div>
-
-       <%= button_to("Sign Out", destroy_user_session_path , :method => :delete, :class => "btn btn-outline-secondary") %>
-       <% end %>                 
-                        
-      </div>
-      </nav>
-                            
-                             
-                              
-                               
+      <body>
+   <%= render "shared/navbar" %>      
+<br>                                   
       <div class= "container">
     <div id="authentication" class="card">
     <%= yield %>
