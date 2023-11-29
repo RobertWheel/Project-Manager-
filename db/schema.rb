@@ -20,9 +20,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_11_29_003702) do
 
   create_table "tasks", force: :cascade do |t|
     t.string "name"
-    t.integer "year"
-    t.integer "month"
-    t.integer "day"
+    t.date "due_date"
     t.boolean "complete"
     t.integer "project_id", null: false
     t.datetime "created_at", null: false
