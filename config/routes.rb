@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   resources :projects do
     end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
+   resources :projects do
+        resources :tasks
+   end
   # Defines the root path route ("/")
   root "dashboard#index"
 end
