@@ -1,9 +1,6 @@
 class TasksController < ApplicationController
-
-
   before_action :set_project
-
-    before_action :set_task, only: %i[ show edit update destroy ]
+  before_action :set_task, only: %i[ show edit update destroy ]
 
   # GET /tasks or /tasks.json
   def index
@@ -29,7 +26,7 @@ class TasksController < ApplicationController
 
     respond_to do |format|
       if @task.save
-        format.html { redirect_to task_url(@task), notice: "Task was successfully created." }
+        format.html { redirect_to project_task_url(@project, @task), notice: "Task was successfully created." }
         format.json { render :show, status: :created, location: @task }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -62,17 +59,18 @@ class TasksController < ApplicationController
   end
 
   private
-
     def set_project
-       @project = Project.find(params[:project_id])
+      @project = Project.find(params[:project_id])
+    end
+
     # Use callbacks to share common setup or constraints between actions.
+
     def set_task
       @task = Task.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
     def task_params
-      params.require(:task).permit(:name, :year, :month, :day, :complete)
+      params.require(:task).permit(:name, :year, :month, :day, :complete, :project_id)
     end
-end
 end

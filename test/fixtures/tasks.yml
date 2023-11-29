@@ -6,6 +6,7 @@ one:
   month: 1
   day: 1
   complete: false
+  project: one
 
 two:
   name: MyString
@@ -13,3 +14,4 @@ two:
   month: 1
   day: 1
   complete: false
+  project: two

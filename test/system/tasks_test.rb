@@ -18,6 +18,7 @@ class TasksTest < ApplicationSystemTestCase
     fill_in "Day", with: @task.day
     fill_in "Month", with: @task.month
     fill_in "Name", with: @task.name
+    fill_in "Project", with: @task.project_id
     fill_in "Year", with: @task.year
     click_on "Create Task"
 
@@ -33,6 +34,7 @@ class TasksTest < ApplicationSystemTestCase
     fill_in "Day", with: @task.day
     fill_in "Month", with: @task.month
     fill_in "Name", with: @task.name
+    fill_in "Project", with: @task.project_id
     fill_in "Year", with: @task.year
     click_on "Update Task"
 

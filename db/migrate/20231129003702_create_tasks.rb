@@ -6,6 +6,7 @@ class CreateTasks < ActiveRecord::Migration[7.0]
       t.integer :month
       t.integer :day
       t.boolean :complete
+      t.references :project, null: false, foreign_key: true
 
       t.timestamps
     end
