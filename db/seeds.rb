@@ -26,3 +26,12 @@ Project.create(
 Project.create(
 :name => "Project 3",
 :description => "Random text")
+
+
+
+
+Task.create(
+:name => "Homework 1"
+)
+
+
