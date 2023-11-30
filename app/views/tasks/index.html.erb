@@ -5,7 +5,7 @@
   <ol class="breadcrumb">
 
  <li class="breadcrumb-item"><%= link_to "Projects", projects_path %></li>
-  <li class="breadcrumb-item"><%= link_to @project.name, projects_path(@project) %></li>
+  <li class="breadcrumb-item"><%= link_to @project.name, project_path(@project) %></li>
   <li class="breadcrumb-item"><%= "Tasks" %></li>
 
 
@@ -44,9 +44,9 @@
   <td><%= task.overdue?%></td>
   <td>
     <% if task.overdue? %>
-      Overdue
+    <span class="badge text-bg-danger">Over Due</span>
     <% elsif task.complete %>
-      Completed
+      <span class="badge text-bg-success"> Completed</span>
     <% end %>
   </td>
 

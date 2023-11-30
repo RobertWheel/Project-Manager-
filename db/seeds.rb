@@ -29,9 +29,16 @@ Project.create(
 
 
 
+Project.all.each do |project|
+  10.times do |index|
+    Task.create(
+      :project => project,
+      :name => "Task #{index}",
+      :due_date => Date.today + 5 - rand(10),
+      :complete => rand(0..2)
+      )
+    end 
+  end
 
-Task.create(
-:name => "Homework 1"
-)
 
 
