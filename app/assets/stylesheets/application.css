@@ -25,7 +25,6 @@ fieldset legend {
 
 }
 
-  td><%= %></td>
 #navbarNav {
     display: flex;
     justify-content: space-between;
